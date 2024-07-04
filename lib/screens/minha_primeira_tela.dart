@@ -7,6 +7,7 @@ void main() {
 class MeuPrimeiroWidget extends StatelessWidget {
   const MeuPrimeiroWidget({super.key});
 
+  @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.grey,

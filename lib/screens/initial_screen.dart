@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_morango_vscode/task.dart';
+import 'package:flutter_morango_vscode/components/task.dart';
 
 class InitialScreen extends StatefulWidget {
   const InitialScreen() : super();
