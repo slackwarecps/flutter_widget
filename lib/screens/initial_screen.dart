@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_morango_vscode/components/task.dart';
 
 class InitialScreen extends StatefulWidget {
-  const InitialScreen() : super();
+  const InitialScreen({super.key});
   @override
   State<InitialScreen> createState() => _InitialScreen();
 }
@@ -18,16 +18,16 @@ class _InitialScreen extends State<InitialScreen> {
       ),
       body: AnimatedOpacity(
         opacity: opacidade ? 1 : 0,
-        duration: Duration(milliseconds: 800),
+        duration: const Duration(milliseconds: 800),
         child: ListView(
           scrollDirection: Axis.vertical,
           children: const [
-            Task('Aprender Flutter asd asd asd asd ', 'images/mascote.png', 3),
-            Task('Ir na academia', 'images/gato-ok.jpg', 2),
-            Task('Jogar Poker', 'images/gato-furioso.webp', 5),
-            Task('Ler', 'images/gato-chorando.jpg', 2),
-            Task('Jogar', 'images/Fabio-Foto.jpg', 5),
-            Task('irra', 'images/gato-de-chapeu.jpg', 1),
+            Task('Mascote Flutter', 'assets/images/mascote.png', 3),
+            Task('Ir na academia ok', 'assets/images/gato-ok.jpg', 2),
+            Task('Gato chorando', 'assets/images/gato-chorando.jpg', 5),
+            Task('Furioso', 'assets/images/gato-furioso.webp', 2),
+            Task('Fabao', 'assets/images/Fabio-Foto.jpg', 5),
+            Task('irra', 'assets/images/gato-de-chapeu.jpg', 1),
             SizedBox(
               height: 80,
             )
@@ -40,7 +40,7 @@ class _InitialScreen extends State<InitialScreen> {
             opacidade = !opacidade;
           });
         },
-        child: Icon(Icons.remove_red_eye),
+        child: const Icon(Icons.remove_red_eye),
       ),
     );
   }

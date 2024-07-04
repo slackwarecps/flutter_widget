@@ -5,8 +5,8 @@ class Difficulty extends StatelessWidget {
 
   const Difficulty({
     required this.difficultyLevel,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

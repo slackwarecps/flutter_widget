@@ -68,7 +68,7 @@ class MeuPrimeiroWidget extends StatelessWidget {
               color: Colors.amber,
               height: 30,
               width: 300,
-              child: Text(
+              child: const Text(
                 'Mamae eu te amo!!',
                 style: TextStyle(
                   color: Colors.black,
@@ -81,7 +81,7 @@ class MeuPrimeiroWidget extends StatelessWidget {
                 onPressed: () {
                   print('voce apertou o botao');
                 },
-                child: Text('Aperte o botão!!!'))
+                child: const Text('Aperte o botão!!!'))
           ]),
     );
   }
