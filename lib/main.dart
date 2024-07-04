@@ -23,15 +23,19 @@ class MyApp extends StatelessWidget {
           body: ListView(
             scrollDirection: Axis.vertical,
             children: const [
-              Task('Aprender Flutter asd asd asd asd ',
-                  'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
-              Task('Andar de Bike',
-                  'https://images.pexels.com/photos/161172/cycling-bike-trail-sport-161172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-              Task('Meditar', 'https://i.ibb.co/tMFcdJT/gato-furioso.webp'),
-              Task('Ler', 'https://i.ibb.co/xGqDtRR/gato-chorando.jpg'),
+              Task(
+                  'Aprender Flutter asd asd asd asd ',
+                  'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
+                  3),
+              Task(
+                  'Andar de Bike',
+                  'https://images.pexels.com/photos/161172/cycling-bike-trail-sport-161172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                  2),
+              Task('Meditar', 'https://i.ibb.co/tMFcdJT/gato-furioso.webp', 5),
+              Task('Ler', 'https://i.ibb.co/xGqDtRR/gato-chorando.jpg', 2),
               Task('Jogar',
-                  'https://i.ibb.co/tB29PZB/kako-epifania-2022-2-c-pia.jpg'),
-              Task('irra', 'https://i.ibb.co/y0fR9KZ/gato-de-chapeu.jpg')
+                  'https://i.ibb.co/tB29PZB/kako-epifania-2022-2-c-pia.jpg', 5),
+              Task('irra', 'https://i.ibb.co/y0fR9KZ/gato-de-chapeu.jpg', 1)
             ],
           ),
           floatingActionButton: FloatingActionButton(
@@ -45,8 +49,9 @@ class MyApp extends StatelessWidget {
 class Task extends StatefulWidget {
   final String nome;
   final String foto;
+  final int dificuldade;
 
-  const Task(this.nome, this.foto, {super.key});
+  const Task(this.nome, this.foto, this.dificuldade, {super.key});
 
   @override
   State<Task> createState() => _TaskState();
@@ -98,27 +103,37 @@ class _TaskState extends State<Task> {
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue,
+                              color: (widget.dificuldade >= 1)
+                                  ? Colors.blue
+                                  : Colors.blue[100],
                             ),
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue,
+                              color: (widget.dificuldade >= 2)
+                                  ? Colors.blue
+                                  : Colors.blue[100],
                             ),
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue,
+                              color: (widget.dificuldade >= 3)
+                                  ? Colors.blue
+                                  : Colors.blue[100],
                             ),
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue[100],
+                              color: (widget.dificuldade >= 4)
+                                  ? Colors.blue
+                                  : Colors.blue[100],
                             ),
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue[100],
+                              color: (widget.dificuldade >= 5)
+                                  ? Colors.blue
+                                  : Colors.blue[100],
                             ),
                           ],
                         ),
