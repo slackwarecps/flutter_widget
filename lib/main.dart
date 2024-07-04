@@ -36,17 +36,12 @@ class _MyAppState extends State<MyApp> {
                     'Aprender Flutter asd asd asd asd ',
                     'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
                     3),
-                Task(
-                    'Andar de Bike',
-                    'https://images.pexels.com/photos/161172/cycling-bike-trail-sport-161172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                Task('Ir na academia', 'https://i.ibb.co/PsLDtZ2/gato-ok.jpg',
                     2),
-                Task(
-                    'Meditar', 'https://i.ibb.co/tMFcdJT/gato-furioso.webp', 5),
+                Task('Jogar Poker',
+                    'https://i.ibb.co/tMFcdJT/gato-furioso.webp', 5),
                 Task('Ler', 'https://i.ibb.co/xGqDtRR/gato-chorando.jpg', 2),
-                Task(
-                    'Jogar',
-                    'https://i.ibb.co/tB29PZB/kako-epifania-2022-2-c-pia.jpg',
-                    5),
+                Task('Jogar', 'https://i.ibb.co/VJNKjYD/Fabio-Foto.jpg', 5),
                 Task('irra', 'https://i.ibb.co/y0fR9KZ/gato-de-chapeu.jpg', 1)
               ],
             ),
