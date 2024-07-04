@@ -22,16 +22,15 @@ class _InitialScreen extends State<InitialScreen> {
         child: ListView(
           scrollDirection: Axis.vertical,
           children: const [
-            Task(
-                'Aprender Flutter asd asd asd asd ',
-                'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
-                3),
-            Task('Ir na academia', 'https://i.ibb.co/PsLDtZ2/gato-ok.jpg', 2),
-            Task(
-                'Jogar Poker', 'https://i.ibb.co/tMFcdJT/gato-furioso.webp', 5),
-            Task('Ler', 'https://i.ibb.co/xGqDtRR/gato-chorando.jpg', 2),
-            Task('Jogar', 'https://i.ibb.co/VJNKjYD/Fabio-Foto.jpg', 5),
-            Task('irra', 'https://i.ibb.co/y0fR9KZ/gato-de-chapeu.jpg', 1)
+            Task('Aprender Flutter asd asd asd asd ', 'images/mascote.png', 3),
+            Task('Ir na academia', 'images/gato-ok.jpg', 2),
+            Task('Jogar Poker', 'images/gato-furioso.webp', 5),
+            Task('Ler', 'images/gato-chorando.jpg', 2),
+            Task('Jogar', 'images/Fabio-Foto.jpg', 5),
+            Task('irra', 'images/gato-de-chapeu.jpg', 1),
+            SizedBox(
+              height: 80,
+            )
           ],
         ),
       ),
