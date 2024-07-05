@@ -19,14 +19,29 @@ class _FormScreenState extends State<FormScreen> {
             height: 650,
             width: 375,
             decoration: BoxDecoration(
-              color: Colors.black,
+              color: Colors.yellow,
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
                 color: Colors.red,
                 width: 3,
               ),
             ),
-            child: Column(),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextFormField(
+                    textAlign: TextAlign.center,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Nome',
+                      fillColor: Colors.white,
+                      filled: true,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ));
   }
