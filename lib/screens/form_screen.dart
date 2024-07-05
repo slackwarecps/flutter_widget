@@ -8,6 +8,10 @@ class FormScreen extends StatefulWidget {
 }
 
 class _FormScreenState extends State<FormScreen> {
+  TextEditingController _nameController = TextEditingController();
+  TextEditingController _difficultyController = TextEditingController();
+  TextEditingController _imageController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +35,7 @@ class _FormScreenState extends State<FormScreen> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
+                    controller: _nameController,
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -40,6 +45,58 @@ class _FormScreenState extends State<FormScreen> {
                     ),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextFormField(
+                    controller: _difficultyController,
+                    textAlign: TextAlign.center,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Dificuldade',
+                      fillColor: Colors.white,
+                      filled: true,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextFormField(
+                    onChanged: (Text) {
+                      setState(() {});
+                    },
+                    controller: _imageController,
+                    textAlign: TextAlign.center,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Imagem',
+                      fillColor: Colors.white,
+                      filled: true,
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 100,
+                  width: 72,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(width: 2, color: Colors.red),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.network(
+                      _imageController.text,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      print(_nameController.text);
+                      print(int.parse(_difficultyController.text));
+                      print(_imageController.text);
+                    },
+                    child: Text('Adicionar!'))
               ],
             ),
           ),
