@@ -5,6 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Emulador Android",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "deviceId":"emulator-5554"
+    },
+    {
       "name": "flutter_widget",
       "request": "launch",
       "type": "dart"
