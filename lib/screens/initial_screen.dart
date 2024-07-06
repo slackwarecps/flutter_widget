@@ -4,12 +4,13 @@ import 'package:flutter_morango_vscode/data/task_inherited.dart';
 import 'package:flutter_morango_vscode/screens/form_screen.dart';
 
 class InitialScreen extends StatefulWidget {
-  const InitialScreen({super.key});
+  const InitialScreen({Key? key}) : super(key: key);
+
   @override
-  State<InitialScreen> createState() => _InitialScreen();
+  State<InitialScreen> createState() => _InitialScreenState();
 }
 
-class _InitialScreen extends State<InitialScreen> {
+class _InitialScreenState extends State<InitialScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,13 +20,16 @@ class _InitialScreen extends State<InitialScreen> {
       ),
       body: ListView(
         children: TaskInherited.of(context).taskList,
+        padding: EdgeInsets.only(top: 8, bottom: 70),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => FormScreen(),
+              builder: (contextNew) => FormScreen(
+                taskContext: context,
+              ),
             ),
           );
         },
