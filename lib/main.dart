@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_morango_vscode/components/task.dart';
+import 'package:flutter_morango_vscode/data/task_inherited.dart';
 import 'package:flutter_morango_vscode/screens/form_screen.dart';
 import 'package:flutter_morango_vscode/screens/initial_screen.dart';
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const InitialScreen(),
+      home: TaskInherited(child: const InitialScreen()),
     );
   }
 }
