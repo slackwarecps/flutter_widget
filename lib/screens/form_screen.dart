@@ -31,6 +31,8 @@ class _FormScreenState extends State<FormScreen> {
               ),
             ),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -87,6 +89,10 @@ class _FormScreenState extends State<FormScreen> {
                     child: Image.network(
                       _imageController.text,
                       fit: BoxFit.cover,
+                      errorBuilder: (BuildContext context, Object Exception,
+                          StackTrace? stackTrace) {
+                        return Image.asset('assets/images/no-photo.png');
+                      },
                     ),
                   ),
                 ),

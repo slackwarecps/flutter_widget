@@ -22,7 +22,7 @@ class _InitialScreen extends State<InitialScreen> {
         child: ListView(
           scrollDirection: Axis.vertical,
           children: const [
-            Task('Mascote Flutter', 'assets/images/mascote.png', 3),
+            Task('Mascote Flutter xxxx', 'assets/images/mascote.png', 3),
             Task('Ir na academia ok', 'assets/images/gato-ok.jpg', 2),
             Task('Gato chorando', 'assets/images/gato-chorando.jpg', 5),
             Task('Furioso', 'assets/images/gato-furioso.webp', 2),
