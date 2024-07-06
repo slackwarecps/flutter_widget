@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_morango_vscode/components/task.dart';
+import 'package:nosso_primeiro_projeto/components/task.dart';
 
 class TaskInherited extends InheritedWidget {
   TaskInherited({
@@ -8,8 +8,11 @@ class TaskInherited extends InheritedWidget {
   }) : super(key: key, child: child);
 
   final List<Task> taskList = [
-    Task('Chorando', 'assets/images/gato-chorando.jpg', 3),
-    Task('Gato ok', 'assets/images/gato-ok.jpg', 2),
+    Task('Aprender Flutter', 'assets/images/gato-chorando.jpg', 3),
+    Task('Andar de Bike', 'assets/images/gato-chorando.jpg', 2),
+    Task('Meditar', 'assets/images/gato-chorando.jpg', 5),
+    Task('Ler', 'assets/images/gato-chorando.jpg', 4),
+    Task('Jogar', 'assets/images/gato-chorando.jpg', 1),
   ];
 
   void newTask(String name, String photo, int difficulty) {
