@@ -127,6 +127,7 @@ class _FormScreenState extends State<FormScreen> {
                     ElevatedButton(
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
+                            // 1 Printa infos
                             print(_nameController.text);
                             print(int.parse(_difficultyController.text));
                             print(_imageController.text);
@@ -136,6 +137,8 @@ class _FormScreenState extends State<FormScreen> {
                                     Text('snackbar! Printando nova Tarefa'),
                               ),
                             );
+                            //2 nagevando para a tela anterior
+                            Navigator.pop(context);
                           }
                         },
                         child: Text('Adicionar!'))
