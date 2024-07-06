@@ -12,6 +12,13 @@
       "deviceId":"emulator-5554"
     },
     {
+      "name": "S22 ultra",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "deviceId":"RQCT303V50A"
+    },
+    {
       "name": "flutter_widget",
       "request": "launch",
       "type": "dart"

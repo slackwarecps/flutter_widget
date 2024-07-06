@@ -22,13 +22,18 @@ class TaskInherited extends InheritedWidget {
     taskList.add(Task(name, photo, difficulty));
   }
 
-// oque isso aqui faz?
-  static TaskInherited of(BuildContext context) {
-    final TaskInherited? result =
-        context.dependOnInheritedWidgetOfExactType<TaskInherited>();
-    assert(result != null, 'No TaskInherited found in context');
-    return result!;
-  }
+/// Retorna uma instância de [TaskInherited] a partir do [context] fornecido.
+/// 
+/// Esta função procura e retorna uma instância de [TaskInherited] do contexto do chamador.
+/// Ela garante que o valor retornado não seja nulo.
+/// 
+/// Lança um erro de assertiva se nenhum [TaskInherited] for encontrado no contexto.
+static TaskInherited of(BuildContext context) {
+  final TaskInherited? result =
+      context.dependOnInheritedWidgetOfExactType<TaskInherited>();
+  assert(result != null, 'No TaskInherited found in context');
+  return result!;
+}
 
 //Quem fica olhando a mudanca do estado
 // notifica todos o tempo todo que o estado mudou
